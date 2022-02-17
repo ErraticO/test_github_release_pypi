@@ -5,7 +5,7 @@ with open("README.md", "r", encoding='utf-8') as fh:
 
 setuptools.setup(
     name="print_text",
-    version="0.2",
+    version="0.1",
     author="wu di",
     author_email="",
     description="test",

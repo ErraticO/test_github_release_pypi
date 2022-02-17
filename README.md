@@ -1,7 +1,7 @@
 # douyin_image [![Version][version-badge]][version-link] ![MIT License][license-badge]
 
 
-test
+test python project upload github and trigger update pypi
 
 
 `print_text` 是一个个人测试,打印字符串
@@ -14,9 +14,9 @@ test
 
 ```
 from print_text import add,remove,update
-print(add())
-print(remove())
-print(update())
+print(add.make())
+print(remove.make())
+print(update.make())
 ```
 
 

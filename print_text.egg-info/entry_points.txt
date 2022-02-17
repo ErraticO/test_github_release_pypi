@@ -1,0 +1,4 @@
+[console_scripts]
+add = print_text.add:make
+remove=print_text.remove:makeupdate = print_text.update:make
+

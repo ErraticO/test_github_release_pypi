@@ -13,7 +13,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/ErraticO/test_github_release_pypi",
     packages=setuptools.find_packages(),
-    install_requires=['numpy==1.14.4'],
+    install_requires=['numpy'],
     entry_points={
         'console_scripts': [
             'add=print_text.add:make',

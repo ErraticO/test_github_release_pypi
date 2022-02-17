@@ -1,7 +1,7 @@
 # douyin_image [![Version][version-badge]][version-link] ![MIT License][license-badge]
 
 
-test
+test python project upload github and trigger update pypi
 
 
 `print_text` 是一个个人测试,打印字符串

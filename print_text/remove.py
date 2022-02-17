@@ -1,0 +1,3 @@
+def make():
+    print("remove")
+

@@ -1,0 +1,49 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Upload Python Package print-text
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+#   push:
+#     branches: [ main ]
+  pull_request:
+    branches: [ main ]
+#   # when release, Triggers
+#   release:
+#    types: [created]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  deploy:
+    name: publish python package to PYPI
+    # run in Linux
+    runs-on: ubuntu-latest
+
+    steps:
+    # use https://github.com/actions/checkout
+    - uses: actions/checkout@v2
+
+    # set python evn: https://github.com/actions/setup-python
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    # pip install Base library
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install setuptools wheel twine
+    
+    # build and publish
+    - name: Build and publish
+      env:
+        TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
+        TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+      run: |
+        python setup.py sdist bdist_wheel
+        twine upload dist/*

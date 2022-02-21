@@ -62,5 +62,5 @@ pip install twine
 twine upload dist/*
 ```
 #### Method of building library(github)
-1. test_github_release_pypi(Github) -> Settings -> Secrets: Used to manage users and passwords
+1. test_github_release_pypi(Github) -> Settings -> Secrets: Used to manage users and passwords of PyPi
 2. test_github_release_pypi(Github) -> Actions -> .github/workflows: Used to create trigger workflows 
